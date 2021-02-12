@@ -1,0 +1,24 @@
+2/12/2021
+Honghao Li & Yue Xu
+
+This is the work of implement Linear hash index
+Part of work reference by https://github.com/Priyansh2/linear_hashing
+
+Here is the requirement:
+Assume that we have a relation Employee(id, name, bio, manager-id).
+The values of id andmanager-id are character strings with fixed size of 8 bytes.
+The values of name and bio arecharacter strings and take at most 200 and 500 bytes. 
+Note that as opposed to the values of idand manager-id, the sizes of the values of name (bio) are not fixed and are between 1 to 200 (500)bytes.
+The size of each block is 4096 bytes (4KB). The size of each record is less than the size of ablock.
+Write a C++ program that reads an input Employee relation and builds a linear hashindex for the relation using attribute id. 
+Increment the value ofnif the average number of records per each block exceeds80% of the block capacity. 
+The input relation is stored in a CSV file, i.e., each tuple is in aseparate line and fields of each record are separated by commas.
+
+
+For compiling the program: g++ main.cpp -o main.out
+For running the program: ./main.out  or 
+                         ./main.out L  or 
+                         ./main.out M
+
+The program accept switch C for index creation mode and L for lookup in itscommand line.
+The switch L is succeeded by the value of input id.
